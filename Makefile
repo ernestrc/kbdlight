@@ -11,7 +11,7 @@ clean:
 	rm -f $(obj) $(bin)
 
 .PHONY: install
-install:
+install: $(bin)
 	install -Dm 4755 $(bin) $(DESTDIR)$(PREFIX)/bin/$(bin)
 
 .PHONY: uninstall
